@@ -17,27 +17,27 @@ deals with the general page settings
 
 <h3>Dot</h3>
 
-**Adding a dot**: click on the page
-**Change point**: moves to a point (or dot) to the left or right of the current one *(also use A and D)*
-**Delete point**: Deletes a point *(also use backspace)*
+**Adding a dot**: click on the page <br>
+**Change point**: moves to a point (or dot) to the left or right of the current one *(also use A and D)* <br>
+**Delete point**: Deletes a point *(also use backspace)* <br>
 
 <h3>Image</h3>
 
-**Upload image**: uploads a refrence image
-**Width and Height**: changes the width and height of the refrence image
-**X and Y**: changes the coordinate position of the image *(also use A and D)*
+**Upload image**: uploads a refrence image <br>
+**Width and Height**: changes the width and height of the refrence image <br>
+**X and Y**: changes the coordinate position of the image *(also use A and D)* <br>
 
 <h3>Text</h3>
 
-**Adding Text**: click on page after adding a message to add text
-**Text**: changes the actual text of the text
-**Color**: changes color of text
-**Font**: changes the font (although not many fonts have been added)
-**Delete Text**: Deletes the last text
+**Adding Text**: click on page after adding a message to add text <br>
+**Text**: changes the actual text of the text <br>
+**Color**: changes color of text <br>
+**Font**: changes the font (although not many fonts have been added) <br>
+**Delete Text**: Deletes the last text <br>
 
 <h2>Saving, Loading, and Exporting</h2>
 these are located at the top of the sidebar
 
-**Saving**: click save and enter a file name
-**Loading**: choose a json file to load
-**Exporting**: loads an external page. click print/save to print the book or save it as pdf (atleast on chrome)
+**Saving**: click save and enter a file name <br>
+**Loading**: choose a json file to load <br>
+**Exporting**: loads an external page. click print/save to print the book or save it as pdf (atleast on chrome) <br>
