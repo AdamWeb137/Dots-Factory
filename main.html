@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <title>Dots Factory</title>
+        <link rel="stylesheet" href="main_style.css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Dots Factory</h1>
+        </div>
+
+        <div id="side">
+            <p id="number_indicator">Page 1/1</p>
+            <hr color="black">
+            <div id="file_btns">
+                <button class="btn_blue" onmouseup="save_file()">Save</button>
+                <button class="btn_blue" onmouseup="export_file()">Export</button>
+                <button class="btn_blue" onmouseup="load_file()">Load</button>
+            </div>
+            <hr color="black">
+            <div id="modes">
+                <div class="mode_change" onmouseup="change_mode('page')" id="btn_page">
+                    <img src="gear.png">
+                    <!-- <p>Page</p> -->
+                </div>
+                <div class="mode_change" onmouseup="change_mode('point')" id="btn_point">
+                    <img src="point.png">
+                    <!-- <p>Point</p> -->
+                </div>
+                <div class="mode_change" onmouseup="change_mode('img')" id="btn_img">
+                    <img src="img.png">
+                    <!-- <p>Image</p> -->
+                </div>
+                <div class="mode_change" onmouseup="change_mode('text')" id="btn_text">
+                    <img src="text.png">
+                    <!-- <p>Text</p> -->
+                </div>
+            </div>
+            <hr color="black">
+            <div id="page" class="settings">
+                <h2>Page Settings</h2>
+
+                <hr>
+
+                <div class="setting_container">
+                    <label for="page_color">Page Color:</label>
+                    <input type="color" id="page_color" name="page_color" value="#ffffff" onchange="change_page_color()">
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="page_zoom">Page Zoom:</label>
+                    <input type="number" id="page_zoom" name="page_zoom" min="3" value="4" style="width: 100px;" onchange="change_zoom()">
+                </div><hr>
+
+                <div class="setting_container">
+                        <button class="btn_blue" onmouseup="insert_page(page_number)">&lt;</button>
+                        <p style="display: inline;">Insert Page</p>
+                        <button class="btn_blue" onmouseup="insert_page(page_number+1)">&gt;</button>
+                </div><hr>
+
+                <div class="setting_container" id="move_page">
+                    <button class="btn_blue" id="page_left" onmouseup="change_page(-1)">&lt;</button>
+                    <p style="display: inline;">Change Page</p>
+                    <button class="btn_blue" id="page_right" onmouseup="change_page(1)">&gt;</button>
+                </div><hr>
+
+                <div class="setting_container">
+                    <button class="btn_red" onmouseup="delete_page()">Delete Page</button>
+                </div>
+
+                <hr>
+
+            </div>
+
+            <div id="point" class="settings">
+                <h2>Point Settings</h2>
+
+                <hr>
+
+                <div class="setting_container" id="move_point">
+                    <button class="btn_blue" id="point_left" onmouseup="change_point(-1)">&lt;</button>
+                    <p style="display: inline;">Change Point</p>
+                    <button class="btn_blue" id="point_right" onmouseup="change_point(1)">&gt;</button>
+                </div><hr>
+
+                <div class="setting_container">
+                    <button class="btn_red" onmouseup="delete_point()">Delete Point</button>
+                </div>
+
+            </div>
+
+            <div id="img" class="settings">
+                <h2>Image Settings</h2>
+                <hr>
+
+                <div class="setting_container">
+                    <p style="text-align: center;">Refrence Image:</p>
+                    <input type="file" name="img_file" id="img_file" accept="image/png, image/jpeg" onchange="new_image()">
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="img_width">width:</label>
+                    <input type="number" id="img_width" name="img_width" min="1" max="340" value="100" onchange="change_img()">
+                    <br>
+                    <br>
+                    <label for="img_height">height:</label>
+                    <input type="number" id="img_height" name="img_height" min="1" max="440" value="100" onchange="change_img()">
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="img_x">x:</label>
+                    <input type="number" id="img_x" name="img_x" min="0" max="340" value="0" onchange="change_img()">
+                    <br>
+                    <br>
+                    <label for="img_y">y:</label>
+                    <input type="number" id="img_y" name="img_y" min="0" max="440" value="0" onchange="change_img()">
+                </div><hr>
+
+                <div class="setting_container">
+                    <button class="btn_red" onmouseup="delete_img()">Delete Image</button>
+                </div>
+
+            </div>
+
+            <div id="text" class="settings">
+                <h2>Text Settings</h2>
+                <hr>
+
+                <div class="setting_container">
+                    <p>Click over page to add text</p>
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="text_text">Text:</label>
+                    <input type="text" id="text_text" name="text_text" style="width: 100px">
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="text_color">Color:</label>
+                    <input type="color" id="text_color" name="text_color">
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="text_font">Font:</label>
+                    <select id="text_font" name="text_font">
+                        <option value="Arial">Arial</option>
+                        <option value="ComicSansMS">ComicSansMS</option>
+                    </select>  
+                </div><hr>
+
+                <div class="setting_container">
+                    <label for="text_size">Font Size:</label>
+                    <input type="number" id="text_size" name="text_size" min="1" value="12" style="width: 100px;">
+                </div><hr>
+
+                <div class="setting_container">
+                    <button class="btn_red" onmouseup="delete_text()">Delete Last Text</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="canvholder"><canvas class="page" id="canv"></canvas></div>
+    </body>
+    <script type="text/javascript" src="main.js"></script>
+</html>
