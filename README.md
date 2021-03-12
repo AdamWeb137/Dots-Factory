@@ -4,7 +4,7 @@
 Dots Factory is a webpage used for making connect the dot puzzles. You can also add text and a refrence image.
 
 <h2>Modes</h2>
-click on a different icon to change modes. They are *page*, *dot*, *image*, and *text* respectively.
+click on a different icon to change modes. They are page, dot, image, and text respectively.
 
 <h3>Page</h3>
 deals with the general page settings
