@@ -9,10 +9,10 @@ click on a different icon to change modes. They are *page*, *dot*, *image*, and 
 <h3>Page</h3>
 deals with the general page settings
 
-**Color**: changes the background color of the page
-**Zoom**: changes the zoom *([ and ] both zoom as well)*
-**Insert Page** adds a page to the left or right of the current page
-**Change Page** move to the page left or right of the current page *(also use left and right arrow keys)*
+**Color**: changes the background color of the page <br>
+**Zoom**: changes the zoom *([ and ] both zoom as well)* <br>
+**Insert Page** adds a page to the left or right of the current page <br>
+**Change Page** move to the page left or right of the current page *(also use left and right arrow keys)* <br>
 **Delete Page** deletes the current page
 
 <h3>Dot</h3>
